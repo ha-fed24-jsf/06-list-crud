@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import AddHat from './components/AddHat.jsx'
 import HatList from './components/HatList.jsx'
+import { hatList } from './data/hats.js'
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
 			<main>
 				<AddHat />
 
-				<HatList />
+				<HatList hats={hatList}  />
 			</main>
 		</div>
 	)
