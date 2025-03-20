@@ -1,9 +1,28 @@
+import { useState } from 'react'
 
-const HatCard = ({ hatInfo }) => (
-	<section className="hat-card">
-		<h3> {hatInfo.name} </h3>
-		<img src={hatInfo.img} alt="Hatt"/>
-		<p> {hatInfo.price} kr </p>
-	</section>
-)
+const HatCard = ({ hatInfo, changePrice }) => {
+	const [isEditing, setIsEditing] = useState(false)
+	const handleEdit = () => {
+
+		setIsEditing(!isEditing)
+	}
+
+	return (
+		<section className="hat-card">
+			<h3> {hatInfo.name} </h3>
+			<img src={hatInfo.img} alt="Hatt"/>
+			{isEditing ? (
+				<input type="number"
+					onChange={event => changePrice(event.target.value, hatInfo.id)}
+					value={hatInfo.price}
+					onBlur={() => setIsEditing(false)}
+					/>
+			) : (
+				<p onClick={handleEdit}>
+					{hatInfo.price} kr 
+				</p>
+			)}
+		</section>
+	)
+}
 export default HatCard

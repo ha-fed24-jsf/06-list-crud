@@ -5,6 +5,26 @@ import HatList from './components/HatList.jsx'
 import { hatList } from './data/hats.js'
 
 function App() {
+	const [hats, setHats] = useState(hatList)
+
+	const changePrice = (newPrice, id) => {
+		// Den vanliga metoden
+		const newList = hats.map(hat => (
+			hat.id === id ? { ...hat, price: Number(newPrice) } : hat
+		))
+		// console.log('App changePrice: ', newPrice, id, newList)
+		setHats(newList)
+
+		/* En enklare (?) metod
+		setHats(hats.map(hat => {
+			if( hat.id === id ) {
+				return { ...hat, price: newPrice }
+			} else {
+				return hat
+			}
+		}))
+		*/
+	}
 
 	return (
 		<div className="hitta-hatt">
@@ -14,7 +34,10 @@ function App() {
 			<main>
 				<AddHat />
 
-				<HatList hats={hatList}  />
+				<HatList
+					hats={hats}
+					changePrice={changePrice }
+					/>
 			</main>
 		</div>
 	)
