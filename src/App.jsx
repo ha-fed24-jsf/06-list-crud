@@ -7,6 +7,20 @@ import { hatList } from './data/hats.js'
 function App() {
 	const [hats, setHats] = useState(hatList)
 
+	const addHat = (name, price, imgUrl) => {
+		// skapa ett hatt-objekt
+		// skapa en kopia av hats som innehåller nya objektet
+		// setHats med nya listan
+
+		const newHat = {
+			id: crypto.randomUUID(),
+			name: name,
+			img: imgUrl,
+			price: price
+		}
+		const newHatList = [ newHat, ...hats ]
+		setHats(newHatList)
+	}
 	const deleteHat = id => {
 		setHats(hats.filter(hat => hat.id !== id))
 	}
@@ -35,7 +49,9 @@ function App() {
 				<h1> Hitta hatt </h1>
 			</header>
 			<main>
-				<AddHat />
+				<AddHat
+					addHat={addHat}
+					/>
 
 				<HatList
 					hats={hats}
