@@ -1,9 +1,8 @@
 import { useState } from 'react'
 
-const HatCard = ({ hatInfo, changePrice }) => {
+const HatCard = ({ hatInfo, changePrice, deleteHat }) => {
 	const [isEditing, setIsEditing] = useState(false)
 	const handleEdit = () => {
-
 		setIsEditing(!isEditing)
 	}
 
@@ -22,7 +21,7 @@ const HatCard = ({ hatInfo, changePrice }) => {
 					{hatInfo.price} kr 
 				</p>
 			)}
-			<button> Ta bort </button>
+			<button onClick={() => deleteHat(hatInfo.id)}> Ta bort </button>
 		</section>
 	)
 }

@@ -39,7 +39,8 @@ function App() {
 
 				<HatList
 					hats={hats}
-					changePrice={changePrice }
+					changePrice={changePrice}
+					deleteHat={deleteHat}
 					/>
 			</main>
 		</div>
