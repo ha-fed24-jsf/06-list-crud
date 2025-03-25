@@ -1,7 +1,7 @@
 const hatList = [
-	{ id: 1, name: "Fedora", price: 499, img: "https://www.bon-clic-bon-genre.eu/img/test-lum.png" },
+	{ id: 1, name: "Fedora", price: 499, img: "https://www.agnoulitahats.com/cdn/shop/files/1930s-Retro-Style-Fur-Felt-Fedora-Hat-For-Men-The-Dogal-Agnoulita-Hats-1.webp?v=1726348216&width=5000" },
 	{ id: 2, name: "Hög hatt", price: 799, img: "https://www.frackhuset.se/wp-content/uploads/2016/02/DSC_2953-768x1024.png" },
-	{ id: 3, name: "Basker", price: 299, img: "https://www.bon-clic-bon-genre.eu/img/test-lum.png" },
+	{ id: 3, name: "Basker", price: 299, img: "https://cdn.starwebserver.se/shops/borjesson/files/cache/flora-basker-rod_t1010-5_grande.jpg?_=1694172562" },
 	{ id: 4, name: "Cowboyhatt", price: 599, img: "https://static.partyking.org/fit-in/1300x0/products/original/cowboyhatt-morkbrun-1.jpg" },
 	{ id: 5, name: "Sombrero", price: 399, img: "https://static.partyking.org/fit-in/1300x0/products/original/sombrerohatt-10052-7.jpg" },
 	{ id: 6, name: "Vikingahjälm", price: 999, img: "https://static.partyking.org/fit-in/1300x0/products/original/vikingahjalm-10056-3.jpg" },
