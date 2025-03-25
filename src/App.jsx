@@ -7,6 +7,9 @@ import { hatList } from './data/hats.js'
 function App() {
 	const [hats, setHats] = useState(hatList)
 
+	const deleteHat = id => {
+		setHats(hats.filter(hat => hat.id !== id))
+	}
 	const changePrice = (newPrice, id) => {
 		// Den vanliga metoden
 		const newList = hats.map(hat => (

@@ -22,6 +22,7 @@ const HatCard = ({ hatInfo, changePrice }) => {
 					{hatInfo.price} kr 
 				</p>
 			)}
+			<button> Ta bort </button>
 		</section>
 	)
 }
